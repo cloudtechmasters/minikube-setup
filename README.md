@@ -30,3 +30,11 @@
 	yum install conntrack -y
 	export PATH=/usr/local/bin:$PATH
 	minikube start --driver=none
+	
+# Minikube setup: (in case of latest version errors)
+	curl -Lo minikube https://github.com/kubernetes/minikube/releases/download/v1.25.2/minikube-linux-amd64
+	chmod +x minikube
+	sudo mv minikube /usr/local/bin/
+	yum install conntrack -y
+	export PATH=/usr/local/bin:$PATH
+	minikube start --driver=none
